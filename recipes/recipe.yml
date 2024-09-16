@@ -4,7 +4,7 @@ name: selene
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kionite-main
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -15,18 +15,151 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: akmods
+    install:
+      - framework-laptop
+      - xpadneo
+      - xone
+
   - type: rpm-ostree
     repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%OS_VERSION%/ayoungdukie-Personal_Repo-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%OS_VERSION%/observeroftime-betterdiscordctl-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%OS_VERSION%/rob72-86Box-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-%OS_VERSION%.repo
+      - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_%OS_VERSION%/home:jejb1:Element.repo
+      - https://rpm.librewolf.net/librewolf-repo.repo
+      - https://copr.fedorainfracloud.org/coprs/mariolimonciello/power-profiles-daemon/repo/fedora-%OS_VERSION%/mariolimonciello-power-profiles-daemon-%OS_VERSION%.repo
+      #- http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      - https://rpm.craftcat.dev/leo.repo
+      - https://negativo17.org/repos/fedora-multimedia.repo
+      - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/erovia/wb32-dfu-updater/repo/fedora-%OS_VERSION%/erovia-wb32-dfu-updater-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/kylegospo/joycond/repo/fedora-%OS_VERSION%/kylegospo-joycond-%OS_VERSION%.repo
+      - https://repository.mullvad.net/rpm/stable/mullvad.repo
+      - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%OS_VERSION%/varlad-zellij-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%OS_VERSION%/tofik-nwg-shell-%OS_VERSION%.repo
     install:
-      # - micro
-      # - starship
+      - python3-pip
+      - python3-devel
+      - iasl
+      - libadwaita
+      - xwaylandvideobridge
+      - distrobox 
+      - power-profiles-daemon
+      - mesa-va-drivers-freeworld
+      - rocminfo
+      - rocm-opencl
+      - rocm-clinfo
+      - libavcodec-freeworld
+      - ffmpeg
+      - radeontop
+      - gstreamer1-plugin-libav
+      - gstreamer1-plugins-bad-free-extras 
+      - gstreamer1-plugins-ugly 
+      - gstreamer1-vaapi 
+      - gstreamer1-plugins-bad-freeworld
+      - steam-devices
+      - mesa-dri-drivers
+      - wezterm
+      - appimagelauncher
+      - zsh
+      - tailscale
+      - neofetch
+      - python3-neovim
+      - make
+      - nodejs
+      - plank
+      - lm_sensors
+      - binutils
+      - bat
+      - imsettings
+      - flameshot
+      - fcitx5-chinese-addons
+      - fcitx5-configtool
+      - fcitx5-gtk
+      - fcitx5-qt
+      - fcitx5-table-extra
+      - fcitx5-table-other
+      - virt-manager
+      - virt-viewer
+      - powertop
+      - fedora-packager-kerberos
+      - krb5-workstation
+      - krb5-pkinit
+      - libsecret
+      - gnome-keyring
+      - mailspring
+      - fedora-packager
+      - fedora-review
+      - copr-cli
+      - awscli2
+      - libimobiledevice-utils
+      - btop
+      - portaudio-devel
+      - freeipa-client
+      - xfreerdp
+      - rapid-photo-downloader
+      - redhat-lsb-core
+      - xterm
+      - wb32-dfu-updater
+      - joycond
+      - strongswan
+      - proxychains-ng
+      - discord
+      - mullvad-vpn
+      - kalendar
+      - zellij
+      # HYPRLAND BEGIN
+      - hyprland
+      - hyprland-plugins
+      - xdg-desktop-portal-hyprland
+      - hyprland-autoname-workspaces
+      - hyprland-contrib
+      - hyprpaper
+      - hyprpicker
+      - hypridle
+      - hyprlock
+      - hyprshot
+      - waybar-git
+      - aylurs-gtk-shell
+      - cliphist
+      - nwg-clipman
+      - swww
+      - waypaper
+      - hyprnome
+      - hyprdim
+      - swaylock-effects
+      - pyprland
+      - mpvpaper
+      - rofi-wayland
+      - nwg-look
+      - network-manager-applet
+      - brightnessctl
+      - parallel
+      - dunst
+      - swayidle
+      - wlogout
+      - pavucontrol
+      - qt6-qtbase-devel
+      - kvantum
+      - qt6ct
+      - qt5ct
+      - fastfetch
+      # HYPRLAND END
+      - nautilus
+      - NetworkManager-tui
+      - qemu
+      - qemu-user-static
+      - binfmt-support
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
+      # Remove the native firefox (from Fedora) in favor of the Flatpak.
+      - firefox
+      - firefox-langpacks
+      - toolbox
+      - lsb_release
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -41,8 +174,39 @@ modules:
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
+      - org.freedesktop.Platform.VulkanLayer.gamescope
+      - io.github.celluloid_player.Celluloid
+      - org.kde.krita
+      - com.github.tchx84.Flatseal
+      - com.github.zadam.trilium
+      - com.moonlight_stream.Moonlight
+      - com.spotify.Client
+      - com.valvesoftware.SteamLink
+      - com.yubico.yubioath
+      - org.localsend.localsend_app
+      - org.prismlauncher.PrismLauncher
+      - org.bluesabre.MenuLibre
+      - org.libreoffice.LibreOffice
+      - com.discordapp.Discord
+      - com.github.Eloston.UngoogledChromium
+      - com.github.Matoking.protontricks
+      - com.github.d4nj1.tlpui
+      - com.github.jeromerobert.pdfarranger
+      - com.github.xournalpp.xournalpp
+      - dev.krtirtho.Flemozi
+      - io.github.seadve.Kooha
+      - io.missioncenter.MissionCenter
+      - net.lutris.Lutris
+      - org.freedesktop.Platform.VulkanLayer.MangoHud
+      - org.godotengine.Godot
+      - org.gustavoperedo.FontDownloader
+      - org.kicad.KiCad
       remove:
       # - org.gnome.eog
+
+  - type: script
+    snippets:
+      - "mkdir -p /opt"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
