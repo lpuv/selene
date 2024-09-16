@@ -21,6 +21,15 @@ modules:
       - xpadneo
       - xone
 
+  - type: fonts
+    install:
+      - CaskadyaCove
+      - FiraCode
+      - Hack
+      - Iosveka
+      - JetBrainsMono
+      - mononoki
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%OS_VERSION%/ayoungdukie-Personal_Repo-%OS_VERSION%.repo
