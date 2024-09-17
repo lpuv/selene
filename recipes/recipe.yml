@@ -30,6 +30,10 @@ modules:
       - JetBrainsMono
       - mononoki
 
+  - type: script
+    snippets:
+      - "mkdir -p /opt"
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%OS_VERSION%/ayoungdukie-Personal_Repo-%OS_VERSION%.repo
@@ -214,10 +218,6 @@ modules:
       - org.kicad.KiCad
       remove:
       # - org.gnome.eog
-
-  - type: script
-    snippets:
-      - "mkdir -p /opt"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
