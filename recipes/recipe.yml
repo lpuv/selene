@@ -50,7 +50,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%OS_VERSION%/varlad-zellij-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%OS_VERSION%/tofik-nwg-shell-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/leo/power-options/fedora-%OS_VERSION%/leo-power-options-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/leo/power-options/repo/fedora-%OS_VERSION%/leo-power-options-%OS_VERSION%.repo
     install:
       - python3-pip
       - python3-devel
