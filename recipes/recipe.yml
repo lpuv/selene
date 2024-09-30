@@ -17,7 +17,6 @@ modules:
 
   - type: akmods
     install:
-      - framework-laptop
       - xpadneo
       - xone
 
