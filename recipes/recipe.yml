@@ -62,7 +62,6 @@ modules:
       - xwaylandvideobridge
       - distrobox 
       - power-profiles-daemon
-      - mesa-va-drivers-freeworld
       - rocminfo
       - rocm-opencl
       - rocm-clinfo
@@ -71,7 +70,6 @@ modules:
       - radeontop
       - gstreamer1-plugin-libav
       - gstreamer1-plugins-bad-free-extras 
-      - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi 
       - gstreamer1-plugins-bad-freeworld
       - steam-devices
