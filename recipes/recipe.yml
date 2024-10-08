@@ -65,7 +65,6 @@ modules:
       - rocminfo
       - rocm-opencl
       - rocm-clinfo
-      - libavcodec-freeworld
       - ffmpeg
       - radeontop
       - gstreamer1-plugin-libav
@@ -119,7 +118,6 @@ modules:
       - joycond
       - strongswan
       - proxychains-ng
-      - discord
       - mullvad-vpn
       - kalendar
       - zellij
