@@ -69,7 +69,6 @@ modules:
       - radeontop
       - gstreamer1-plugin-libav
       - gstreamer1-vaapi 
-      - gstreamer1-plugins-bad-freeworld
       - steam-devices
       - mesa-dri-drivers
       - wezterm
@@ -165,6 +164,7 @@ modules:
       - power-options
       - rust2rpm
       - gamescope
+      - mpv
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
