@@ -99,7 +99,7 @@ modules:
       - krb5-pkinit
       - libsecret
       - gnome-keyring
-      - mailspring
+      # - mailspring
       - fedora-packager
       - fedora-review
       - copr-cli
