@@ -32,6 +32,8 @@ modules:
   - type: script
     snippets:
       - "mkdir -p /opt"
+    scripts:
+      - pipewire.sh
 
   - type: rpm-ostree
     repos:
