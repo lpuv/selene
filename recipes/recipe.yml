@@ -169,6 +169,7 @@ modules:
       - webkit2gtk4.0-devel
       - steam
       - pipewire-alsa
+      - pipewire-libs
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
