@@ -165,8 +165,8 @@ modules:
       - rust2rpm
       - gamescope
       - mpv
-      - webkit2gtk4.0 
-      - webkit2gtk4.0-devel
+      - webkit2gtk4.1 
+      - webkit2gtk4.1-devel
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
