@@ -73,7 +73,6 @@ modules:
       - appimagelauncher
       - zsh
       - tailscale
-      - neofetch
       - python3-neovim
       - make
       - nodejs
