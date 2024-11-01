@@ -59,7 +59,7 @@ modules:
       - libadwaita
       - xwaylandvideobridge
       - distrobox 
-      - power-profiles-daemon
+      - tuned-ppd
       - rocminfo
       - rocm-opencl
       - rocm-clinfo
