@@ -166,6 +166,7 @@ modules:
       - webkit2gtk4.1-devel
       - clblast
       - rocm-hip
+      - hipblas
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
