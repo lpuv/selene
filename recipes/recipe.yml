@@ -167,6 +167,7 @@ modules:
       - clblast
       - rocm-hip
       - hipblas
+      - rocm-smi
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
