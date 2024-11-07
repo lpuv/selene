@@ -164,6 +164,8 @@ modules:
       - mpv
       - webkit2gtk4.1 
       - webkit2gtk4.1-devel
+      - clblast
+      - rocm-hip
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
