@@ -168,6 +168,7 @@ modules:
       - rocm-hip
       - hipblas
       - rocm-smi
+      - eza
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
