@@ -169,6 +169,7 @@ modules:
       - hipblas
       - rocm-smi
       - eza
+      - kernel-6.11.7-300.fc41
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
